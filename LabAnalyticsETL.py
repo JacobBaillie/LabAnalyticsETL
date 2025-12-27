@@ -32,7 +32,7 @@ DB_PASSWORD = "***" # <-- CHANGE ME
 
 # Calendar extraction window (UTC ISO)
 TIME_MIN_UTC = "2020-01-01T00:00:00Z"
-TIME_MAX_UTC = "2024-12-31T23:59:59Z"
+TIME_MAX_UTC = "2025-12-31T23:59:59Z"
 
 # Calendars to pull (resource calendars strongly preferred for privacy)
 CALENDAR_IDS = [
@@ -358,4 +358,5 @@ def main():
 
 if __name__ == "__main__":
     main()
+
 
