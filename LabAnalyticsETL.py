@@ -28,7 +28,7 @@ DB_HOST = "localhost"
 DB_PORT = 5432 #default port for Postgres
 DB_NAME = "lab_analytics"
 DB_USER = "postgres"
-DB_PASSWORD = "bclhj5Dobe!"
+DB_PASSWORD = "***" # <-- CHANGE ME
 
 # Calendar extraction window (UTC ISO)
 TIME_MIN_UTC = "2020-01-01T00:00:00Z"
@@ -358,3 +358,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+
