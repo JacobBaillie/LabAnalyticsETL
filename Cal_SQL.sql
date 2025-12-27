@@ -1,4 +1,4 @@
-CREATE TABLE calendar_events AS
+CREATE VIEW calendar_events AS
 
 SELECT	d1.title,
 		d1.start_ts AS start_date,
@@ -31,5 +31,6 @@ SELECT	d3.title,
 		d4.mentions_wavelength_lightsource
 FROM raw_events_deid AS d3
 JOIN event_features AS d4 ON d3.event_pk = d4.event_pk
+
 
 ORDER BY start_date ASC
