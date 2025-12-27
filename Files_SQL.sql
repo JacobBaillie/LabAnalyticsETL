@@ -1,4 +1,4 @@
-CREATE TABLE files AS
+CREATE VIEW files AS
 
 SELECT	mother_folder,
 		day,
@@ -20,4 +20,5 @@ SELECT	mother_folder,
 FROM user_files_alumni
 
 ORDER BY day ASC
+
 
