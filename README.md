@@ -6,21 +6,21 @@ Our lab was facing experiment backlogs, sometimes forcing users to wait over a m
 
 Goal: Reduce experiment lead-times by better utilizing instruments. Provide statistical credibility to enforce administrative changes.
 
-Pulled events from shared calendar via Google Calendar API
-De-identified all sensitive fields using HMAC hashing before storage
-Normalized timezones and recurring events
-Engineered behavioral features (booking details, lead time, duration, after-hours usage, and last-minute changes)
-Scanned shared lab drives to measure daily activity per user folder (number of files created per day per user)
-Corrected timestamp drift and filtered to valid experiment booking windows by matching the user to the instrument booked each day (matching user’s name in reservation and file storage folder)
-Implemented batching logic to fix outliers (some experiments generate one file per datum while others produce one file per experiment)
+Pulled events from shared calendar via Google Calendar API.
+De-identified all sensitive fields using HMAC hashing before storage.
+Normalized timezones and recurring events.
+Engineered behavioral features (booking details, lead time, duration, after-hours usage, and last-minute changes).
+Scanned shared lab drives to measure daily activity per user folder (number of files created per day per user).
+Corrected timestamp drift and filtered to valid experiment booking windows by matching the user to the instrument booked each day (matching user’s name in reservation and file storage folder).
+Implemented batching logic to fix outliers (some experiments generate one file per datum while others produce one file per experiment).
 Loaded and organized data in PostgreSQL for high-level EDA. Manually confirmed outliers are real data.
 Used generalize linear model (negative binomial) to determine title length as a crucial predictor for file count.
 Used univariate regression, then multivariate regression with extraneous variables (weekday, event duration, lead time) to ensure confidence in assessment.
-Policy was implemented at start of 2025
+Policy was implemented at start of 2025.
 
 One year later, performed 3 causal regression models (interrupted time series) to confirm:
-File counts are higher in 2025 based on Model A (total effect considering policy only)
-Higher utilization is strongly linked to more detailed reservation info, quantified by Model B (association model)
+File counts are higher in 2025 based on Model A (total effect considering policy only).
+Higher utilization is strongly linked to more detailed reservation info, quantified by Model B (association model).
 Improved reservation details account for most of the increased file counts after the policy is created based on Model C, indicating the policy had the intended effect on user behavior.
 
 ---
